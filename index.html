@@ -2,7 +2,7 @@
 <script>
 var isMobile = /iPhone|iPad|iPod|Android|Windows/i.test(navigator.userAgent);
 var cookiecount = 0;
-var clickrate =  75*10**9;
+var clickrate =  1
 var cps =  (((((cursor) + grandma * 5) + farm * 70) + mine * 620) + factory * 6360);
 var multiplier = 1
 var cookieimg = document.getElementById('cookieimg')
@@ -78,6 +78,17 @@ var idleverse = 0
     {
         margin: px;
     }
+    #beta
+    {
+        color: red;
+        font-weight: 900;
+    }
+    #important
+    {
+        color: red;
+        font-weight: 900;
+    }
+
 
 </style>
 <body>
@@ -96,9 +107,11 @@ var idleverse = 0
     <p id="cps">per second: 0</p>
     <br>
     <br><br>
+    <p>This is a <span id="beta">BETA</span> and will change</p>
 
     <button><a href="#" onclick="save()">Save</a></button>
     <button><a href="#" onclick="load()">Load</a></button>
+    <p id ="important">click on the underlined text to activate that button</p>
     <br>
     <br>
               
