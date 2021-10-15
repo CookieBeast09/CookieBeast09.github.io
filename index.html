@@ -175,6 +175,9 @@ var idleverse = 0
     <br>
     <h1 id="portal">Portal</h1>
     <button><a href="#portal" onclick="buyportal()"><img src="https://i.pinimg.com/originals/b1/1e/f4/b11ef480fb3d7b57fd326e484b35f984.jpg" alt="" width="50px" height="50px"></a></button>
+    <p id="portalcost">1000000000000</p>
+    <p id="amountportal">0 portals</p>
+    <p id="portalcps">+ 10 million cps</p>
     <hr>
 
     <br>
@@ -200,6 +203,7 @@ var idleverse = 0
             localStorage.setItem("wizardtower", wizardTower)
             localStorage.setItem("shipment", shipment)
             localStorage.setItem("alchemylab", alchemyLab)
+            localStorage.setItem("portal", portal)
         }
         function load(params)
         {
@@ -225,6 +229,8 @@ var idleverse = 0
             shipment = parseInt(shipment)
             alchemyLab = localStorage.getItem('alchemylab')
             alchemyLab = parseInt(alchemyLab)
+            portal = localStorage.getItem("portal")
+            portal = parseInt(portal)
 
             update();
             
@@ -255,13 +261,13 @@ var idleverse = 0
             document.title = cookiecount + " cookies"
             document.getElementById('cps').innerHTML = "per second: " + ((((((((((cursor) + grandma * 5) + farm * 10) + mine * 47) + factory * 260) + bank * 1400) + temple * 7800) + wizardTower * 44000) + shipment * 260000) + alchemyLab * 1600000)
             
-        /*
+        
           if (parseInt(localStorage.getItem("cookiecount")) <= cookiecount)
           {
               localStorage.setItem("cookiecount", cookiecount)
 
           }
-          if (parseInt(localstorage.getItem("cursor")) < cursor)
+        /*if (parseInt(localstorage.getItem("cursor")) < cursor)
           {
               localStorage.setItem("cursor", cursor)
               
@@ -386,6 +392,8 @@ var idleverse = 0
             document.getElementById('amountshipment').innerHTML = shipment + " shipments"
             document.getElementById('alchemylabcost').innerHTML = Math.round(75000000000 * (1.20 ** alchemyLab)) + " cookies"
             document.getElementById('amountalchemylab').innerHTML = alchemyLab + " alchemy labs"
+            document.getElementById('portalcost').innerHTML = Math.round(10**12 * (1.20 ** portal)) + " cookies"
+            document.getElementById('amountportal').innerHTML = portal + " portal"
 
         }
         function buymultiplier(params)
@@ -517,6 +525,17 @@ var idleverse = 0
                 update()
                 
             }
+        }
+        function buyportal(params)
+        {
+            if (cookiecount >= Math.round(10**12 * (1.20 ** portal)))
+            {
+                cookiecount = cookiecount - Math.round(10**12 * (1.20 ** portal))
+                portal = portal + 1 
+                update()
+                
+            }
+            
         }
 
         //return num <= 999999999 ? num : (0.1 * Math.floor(num / 1000)).toFixed(1).replace
