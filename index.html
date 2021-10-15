@@ -254,6 +254,65 @@ var idleverse = 0
             document.getElementById('millbill').innerHTML = cookiecount
             document.title = cookiecount + " cookies"
             document.getElementById('cps').innerHTML = "per second: " + ((((((((((cursor) + grandma * 5) + farm * 10) + mine * 47) + factory * 260) + bank * 1400) + temple * 7800) + wizardTower * 44000) + shipment * 260000) + alchemyLab * 1600000)
+            
+          if (parseInt(localStorage.getItem("cookiecount")) <= cookiecount)
+          {
+              localStorage.setItem("cookiecount", cookiecount)
+
+          }
+          if (parseInt(localstorage.getItem("cursor")) <= cursor)
+          {
+              localStorage.setItem("cursor", cursor)
+              
+          }
+          if (parseInt(localstorage.getItem("grandma")) <= grandma)
+          {
+              localstorage.setItem("grandma", grandma)
+              
+          }
+          if (parseInt(localstorage.getItem("farm")) <= farm)
+          {
+              localstorage.setItem("farm", farm)
+              
+          }
+          if (parseInt(localstorage.getItem("mine")) <= mine)
+          {
+              localstorage.setItem("mine", mine)
+
+              
+          }
+          if (parseInt(localstorage.getItem("factory")) <= factory)
+          {
+              localstorage.setItem("factory", factory)
+            
+          }
+          if (parseInt(localstorage.getItem("bank")) <= bank)
+          {
+              localstorage.setItem("bank", bank)
+              
+          }
+          if (parseInt(localstorage.getItem("temple")) <= temple)
+          {
+              localstorage.setItem("temple", temple)
+              
+          }
+          if (parseInt(localstorage.getItem("wizardtower")) <= wizardTower)
+          {
+              localstorage.setItem("wizardtower", wizardTower)
+              
+          }
+          if (parseInt(localstorage.getItem("shipment")) <= shipment)
+          {
+              localstorage.setItem("shipment", shipment)
+              
+          }
+          if (parseInt(localstorage.getItem("alchemylab")) <= alchemyLab)
+          {
+              localstoragea.setItem("alchemylab", alchemyLab)
+              
+          }
+     
+
 
           if (cookiecount >= 1000000000000000)
           {
@@ -308,9 +367,8 @@ var idleverse = 0
           //partition--------------------------------------
 
 
-            
-            document.getElementById('cursorcost').innerHTML = Math.round(15 * (1.20 ** cursor)) + " coookies"
-            document.getElementById('amountcursor').innerHTML = cursor + " cursors"
+            document.getElementById('cursorcost').innerHTML = Math.round(15 * (1.20 ** cursor)) + " cookies"
+            document.getElementById('amountcursor').innerHTML = cursor + "cursors"
             document.getElementById('grandmacost').innerHTML = Math.round(100 * (1.20 ** grandma)) + " cookies"
             document.getElementById('amountgrandma').innerHTML = grandma + " grandmas"
             document.getElementById('farmcost').innerHTML = Math.round(1200 * (1.20 ** farm)) + " cookies"
