@@ -247,6 +247,7 @@ var idleverse = 0
             cookiecount = cookiecount + wizardTower * 44000
             cookiecount = cookiecount + shipment * 260000
             cookiecount = cookiecount + alchemyLab * 1600000
+            cookiecount = cookiecount + portal * 10000000
             
             
         }
@@ -259,7 +260,7 @@ var idleverse = 0
             document.getElementById('text').value = cookiecount;
             document.getElementById('millbill').innerHTML = cookiecount
             document.title = cookiecount + " cookies"
-            document.getElementById('cps').innerHTML = "per second: " + ((((((((((cursor) + grandma * 5) + farm * 10) + mine * 47) + factory * 260) + bank * 1400) + temple * 7800) + wizardTower * 44000) + shipment * 260000) + alchemyLab * 1600000)
+            document.getElementById('cps').innerHTML = "per second: " + (((((((((((cursor) + grandma * 5) + farm * 10) + mine * 47) + factory * 260) + bank * 1400) + temple * 7800) + wizardTower * 44000) + shipment * 260000) + alchemyLab * 1600000) + portal * 10000000)
             
         
           if (parseInt(localStorage.getItem("cookiecount")) <= cookiecount)
