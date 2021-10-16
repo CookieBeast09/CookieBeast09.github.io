@@ -88,6 +88,23 @@ var idleverse = 0
         color: red;
         font-weight: 900;
     }
+    #buildings
+    {
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        height: 100%;
+        width: 25%;
+        overflow: scroll;
+        border: grey 5pc, solid;
+    }
+    #sample
+    {
+        position: absolute;
+        top: 0%;
+        font-size: 250px;
+        border-right: grey, 5px;
+    }
 
 
 </style>
@@ -112,76 +129,111 @@ var idleverse = 0
     <button><a href="#" onclick="load()">Load</a></button>
     <p id ="important">click on the underlined text to activate that button</p>  
     <br><br>
-    <hr>
+    <div id="buildings">
+        <div class="center">
     <h1 id="cursor">Cursor</h1>
     <button><a href="#cursor" onclick="buycursor()"><img src="https://www.seekpng.com/png/full/6-68524_mouse-cursor-png.png" alt="" width="50px" height="50px"></a></button>
     <p id="cursorcost">15 cookies</p>
     <p id="amountcursor">0 cursors</p>
     <p id="cursorcps">+ 1 cps</p>
     <br>
+        </div>
+    <br>
+    <hr>
+    <div class="center">
     <h1 id="grandma">Grandma</h1>
     <button id="grandmabutton"><a href="#grandma" onclick="buygrandma()"><img src="https://listproducer.com/wp-content/uploads/2014/07/grandma-3.jpg" alt="" width="50px" height="50px"></a></button>
     <p id="grandmacost">100 cookies</p>
     <p id="amountgrandma">0 grandmas</p>
     <p id="grandmacps">+ 5 cps</p>
+    <br></div>
     <br>
+    <hr>
+    <div class="center">
     <h1 id="farm">Farm</h1>
     <button><a href="#farm" onclick="buyfarm()"><img src="https://i.huffpost.com/gen/1216428/images/o-FARM-facebook.jpg" alt="" width="50px" height="50px"></a></button>
     <p id="farmcost">1200 cookies</p>
     <p id="amountfarm">0 farms</p>
     <p id="farmcps">+ 10 cps</p>
+    <br></div>
     <br>
+    <hr>
+    <div class="center">
     <h1 id="mine">Mine</h1>
     <button><a href="#mine" onclick="buymine()"><img src="https://bugs.mojang.com/secure/thumbnail/297453/_thumb_297453.png" alt="" width="50px" height="50px"></a></button>
     <p id="minecost">12000 cookies</p>
     <p id="amountmine">0 mines</p>
     <p id="minecps">+ 47 cps</p>
+    <br></div>
     <br>
+    <hr>
+    <div class="center">
     <h1 id="factory">Factory</h1>
     <button><a href="#factory" onclick="buyfactory()"><img src="https://www.oneplanetnetwork.org/sites/default/files/factory-pollution.jpg" alt="" width="50px" height="50px"></a></button>
     <p id="factorycost">130000 cookies</p>
     <p id="amountfactory">0 factories</p>
     <p id="factorycps">+ 260 cps</p>
+    <br></div>
     <br>
+    <hr>
+    <div class="center">
     <h1 id="bank">Bank</h1>
     <button><a href="#bank" onclick="buybank()"><img src="https://library.kissclipart.com/20190130/jow/kissclipart-bank-and-bitcoin-clipart-bank-account-bitcoin-289ab687b460ce73.png" alt="" width="50px" height="50px"></a></button>
     <p id="bankcost">1400000 cookies</p>
     <p id="amountbank">0 banks</p>
     <p id="bankcps">+ 1400 cps</p>
+    <br></div>
     <br>
+    <hr>
+    <div class="center">
     <h1 id="temple">Temple</h1>
     <button><a href="#temple" onclick="buytemple()"><img src="https://ukrainetrek.com/blog/wp-content/uploads/2019/06/neo-gothic-catholic-church-kamianka-buzka-ukraine-2.jpg" alt="" width="50px" height="50px"></a></button>
     <p id="templecost">20000000 cookies</p>
     <p id="amounttemple">0 temples</p>
     <p id="templecps">+ 7800 cps</p>
+    <br></div>
     <br>
+    <hr>
+    <div class="center">
     <h1 id="wizardtower">Wizard Tower</h1>
     <button><a href="#wizardtower" onclick="buywizardtower()"><img src="https://img-new.cgtrader.com/items/1884663/4c0e5807c5/wizard-tower-3d-model-low-poly-obj-mtl-fbx-unitypackage-prefab-mat.jpg" alt="" width="50px" height="50px"></a></button>
     <p id="wizardtowercost">330000000 cookies</p>
     <p id="amountwizardtower">0 wizard towers</p>
     <p id="wizardtowercps">+ 44000 cps</p>
+    <br></div>
     <br>
+    <hr>
+    <div class="center">
     <h1 id="shipment">Shipment</h1>
     <button><a href="#shipment" onclick="buyshipment()" ><img src="https://cdn1.dotesports.com/wp-content/uploads/2019/09/16100000/Fortnite-rocket-1.jpg" alt="" width="50px" height="50px"></a></button>
     <p id="shipmentcost">5100000000 cookies</p>
     <p id="amountshipment">0 shipments</p>
     <p id="shipmentcps">+ 260000 cps</p>
+    <br></div>
     <br>
+    <hr>
+    <div class="center">
     <h1 id="alchemylab">Alchemy Lab</h1>
     <button><a href="#alchemylab" onclick="buyalchemylab()"><img src="https://vignette.wikia.nocookie.net/dantdm/images/0/02/Old_Lab.jpg/revision/latest?cb=20190514125926" alt="" width="50px" height="50px"></a></button>
     <p id="alchemylabcost">75000000000 cookies</p>
     <p id="amountalchemylab">0 alchemy labs</p>
     <p id="alchemylabcps">+ 1.6 million cps</p>
+    <br></div>
     <br>
+    <hr>
+    <div class="center">
     <h1 id="portal">Portal</h1>
     <button><a href="#portal" onclick="buyportal()"><img src="https://i.pinimg.com/originals/b1/1e/f4/b11ef480fb3d7b57fd326e484b35f984.jpg" alt="" width="50px" height="50px"></a></button>
     <p id="portalcost">1000000000000</p>
     <p id="amountportal">0 portals</p>
     <p id="portalcps">+ 10 million cps</p>
-    <hr>
+    <br></div>
+    </div>
+    
+    <br><br><br><br><br>
 
     <br>
-    <hr>
+
 
     <script>
         function add()
