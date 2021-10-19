@@ -2,7 +2,7 @@
 <script>
 var isMobile = /iPhone|iPad|iPod|Android|Windows/i.test(navigator.userAgent);
 var cookiecount = 0;
-var clickrate =  1
+var clickrate =  (1*75)*10**9
 var cps =  (((((cursor) + grandma * 5) + farm * 70) + mine * 620) + factory * 6360);
 var multiplier = 1
 var cookieimg = document.getElementById('cookieimg')
@@ -105,10 +105,17 @@ var idleverse = 0
         font-size: 250px;
         border-right: grey, 5px;
     }
+    #border
+    {
+        position: absolute;
+        left: 72%;
+
+    }
 
 
 </style>
 <body>
+    <img src="https://cdn.wallpapersafari.com/37/14/3cZIng.jpg" alt="" width="15px" height="100%" id="border">
     <script>
         if (navigator.userAgent == 1, 18, 4, 12.1, 1, 1.0, 12)
         {
@@ -137,6 +144,7 @@ var idleverse = 0
     <p id="amountcursor">0 cursors</p>
     <p id="cursorcps">+ 1 cps</p>
     <br>
+    <h1 id = "yak"></h1>
         </div>
     <br>
     <hr>
@@ -303,6 +311,16 @@ var idleverse = 0
             
             
         }
+        function addcc(params)
+        {
+            if ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) >= 1) 
+            {
+                cookiecount = cookiecount + (10 / ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000)))        
+                document.getElementById('millbill').innerHTML = cookiecount      
+            }
+            
+        }
+        setInterval(addcc(),10)
         setInterval(timer, 1000)
         setInterval(update, 250)
         function update(params)
@@ -405,23 +423,23 @@ var idleverse = 0
 
           //cps simplification
 
-          if ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) >= 1000000000000000)
+          if ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) + (portal * 10**7)>= 1000000000000000)
           {
-              document.getElementById('cps').innerHTML = "per second: " + (Math.round(1000 * (cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) / 1000000000000000) / 1000) + " quadrillion"
+              document.getElementById('cps').innerHTML = "per second: " + (Math.round(1000 * (cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) + (portal * 10**7) / 1000000000000000) / 1000) + " quadrillion"
               
           }
-          else if ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) >= 1000000000000)
+          else if ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) + (portal * 10**7)>= 1000000000000)
           {
-              document.getElementById('cps').innerHTML = "per second: " + (Math.round(1000 * ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) / 1000000000000)) / 1000) + " trillion"
+              document.getElementById('cps').innerHTML = "per second: " + (Math.round(1000 * ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) + (portal * 10**7) / 1000000000000)) / 1000) + " trillion"
               
           }
-          else if ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) >= 1000000000 )
+          else if ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) + (portal * 10**7) >= 1000000000 )
           {
-              document.getElementById('cps').innerHTML = "per second: " + (Math.round( 1000 * ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) / 1000000000)) / 1000) + " billion"
+              document.getElementById('cps').innerHTML = "per second: " + (Math.round( 1000 * ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) + (portal * 10**7) / 1000000000)) / 1000) + " billion"
           }
-          else if ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) >= 1000000)
+          else if ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) + (portal * 10**7) >= 1000000)
           {
-              document.getElementById('cps').innerHTML = "per second: " + (Math.round(1000 * ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000)) / 1000000) / 1000) + " million"
+              document.getElementById('cps').innerHTML = "per second: " + (Math.round(1000 * ((cursor) + (grandma * 5) + (farm * 10) + (mine * 47) + (factory * 260) + (bank * 1400) + (temple * 7800) + (wizardTower * 44000) + (shipment * 260000) + (alchemyLab * 1600000) + (portal * 10**7)) / 1000000) / 1000) + " million"
           }
 
 
@@ -600,7 +618,7 @@ var idleverse = 0
     </script>
 
 <img src="https://glpg.co.uk/wp-content/uploads/2016/12/white-background-images-9.jpg" alt="" id="img" height="50px" width="250px">
-
+<br><br><br><br><br>
 <h1>The idea of "Cookie Clicker" belongs to Orteil and Opti. This website is just a parody</h1>
     <a href="https://orteil.dashnet.org/cookieclicker/" type="n">This is the real Cookie Clicker</a>
     
