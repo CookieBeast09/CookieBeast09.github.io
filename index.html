@@ -2,9 +2,10 @@
 <script>
 var isMobile = /iPhone|iPad|iPod|Android|Windows/i.test(navigator.userAgent);
 var cookiecount = 0;
-var clickrate =  (1*75)*10**9
+var clickrate =  1
 var cps =  (((((cursor) + grandma * 5) + farm * 70) + mine * 620) + factory * 6360);
 var multiplier = 1
+var m = Math.random(15, 450)
 var cookieimg = document.getElementById('cookieimg')
 var cursor = 0
 var cursorcost = cursorcost + (cursorcost * .20)
@@ -63,7 +64,7 @@ var idleverse = 0
         font-size: 25px;
         font-weight: 700;
         top: 30px;
-        left: 250px;
+        left: 250px; 
 
         
 
@@ -111,19 +112,22 @@ var idleverse = 0
         left: 72%;
 
     }
+    #body
+    {
+        background-image: url("http://vignette3.wikia.nocookie.net/cookieclicker/images/5/50/Wiki-background/revision/latest?cb=20130930144956");
+        width: clamp(200px, 50%, 600px);
+    }
+    #button
+    {
+        color: black;
+    }
 
 
 </style>
 <body>
-    <img src="https://cdn.wallpapersafari.com/37/14/3cZIng.jpg" alt="" width="15px" height="100%" id="border">
-    <script>
-        if (navigator.userAgent == 1, 18, 4, 12.1, 1, 1.0, 12)
-        {
-            cookieimg.style.height = '100px';
-            
-        }
+    
     </script>
-    <a href=# onclick="add()"><img src="http://static2.wikia.nocookie.net/__cb20130827014914/cookieclicker/images/5/5a/PerfectCookie.png" alt="" id="cookieimg" width="200pc" height="200px"></a>
+    <a href=# onclick="add()"><img src="http://static2.wikia.nocookie.net/__cb20130827014914/cookieclicker/images/5/5a/PerfectCookie.png" alt="" id="cookieimg" width="200pc" height="200pc"></a>
     <br>
     <br><br><br>
     <input type="text" id="text" disabled style = text-align:center;> <p id = "no"> cookies</p> <p id="millbill">0</p> 
@@ -235,6 +239,15 @@ var idleverse = 0
     <p id="portalcost">1000000000000</p>
     <p id="amountportal">0 portals</p>
     <p id="portalcps">+ 10 million cps</p>
+    <br>
+    <hr>
+    <h1 id="timemachine">Time Machine</h1>
+    <button><a href="#" onclick="buytimemachine()"><img src="https://erkelzaar.tsudao.com/models/perrotta/TIME_MACHINE.jpg" alt="" width="50px" height="50px"></a></button>
+    <p id="timemachinecost">14000000000000</p>
+    <p id="amounttimemachine">0 time machines</p>
+    <p id="timemachinecps">+ 65 million cps</p>
+    <br>
+    <hr>
     <br></div>
     </div>
     
@@ -247,7 +260,13 @@ var idleverse = 0
         function add()
         {
             cookiecount = cookiecount + clickrate
+            interimg()
             update();
+            
+        }
+        function interimg(params)
+        {
+            document.getElementById('cookieimg').width = "300px";
             
         }
         function save(params)
@@ -308,8 +327,7 @@ var idleverse = 0
             cookiecount = cookiecount + shipment * 260000
             cookiecount = cookiecount + alchemyLab * 1600000
             cookiecount = cookiecount + portal * 10000000
-            
-            
+            cookiecount = cookiecount + timeMachine * 65*10**9
         }
         function addcc(params)
         {
@@ -331,14 +349,19 @@ var idleverse = 0
             document.getElementById('millbill').innerHTML = cookiecount
             document.title = cookiecount + " cookies"
             document.getElementById('cps').innerHTML = "per second: " + (((((((((((cursor) + grandma * 5) + farm * 10) + mine * 47) + factory * 260) + bank * 1400) + temple * 7800) + wizardTower * 44000) + shipment * 260000) + alchemyLab * 1600000) + portal * 10000000)
+            if (window.closed == true)
+            {
+                save()
+                
+            }
             
         
-          if (parseInt(localStorage.getItem("cookiecount")) <= cookiecount)
+        /*  if (parseInt(localStorage.getItem("cookiecount")) <= cookiecount)
           {
               localStorage.setItem("cookiecount", cookiecount)
 
           }
-        /*if (parseInt(localstorage.getItem("cursor")) < cursor)
+        if (parseInt(localstorage.getItem("cursor")) < cursor)
           {
               localStorage.setItem("cursor", cursor)
               
@@ -465,6 +488,8 @@ var idleverse = 0
             document.getElementById('amountalchemylab').innerHTML = alchemyLab + " alchemy labs"
             document.getElementById('portalcost').innerHTML = Math.round(10**12 * (1.20 ** portal)) + " cookies"
             document.getElementById('amountportal').innerHTML = portal + " portal"
+            document.getElementById('timemachinecost').innerHTML = Math.round(14*10**12 * (1.20 ** timeMachine)) + " cookies"
+            document.getElementById('amounttimemachine').innerHTML = timeMachine + " timemachines"
 
         }
         function buymultiplier(params)
@@ -608,6 +633,17 @@ var idleverse = 0
             }
             
         }
+        function buytimemachine(params)
+        {
+            if (cookiecount >= Math.round(14*10**12 * (1.20 ** timeMachine))) 
+            {
+                cookiecount = cookiecount - Math.round(14*10**12 * (1.20 ** timeMachine))
+                portal = portal + 1
+                update()
+                
+            }
+            
+        }
 
         //return num <= 999999999 ? num : (0.1 * Math.floor(num / 1000)).toFixed(1).replace
     //<br>
@@ -623,4 +659,4 @@ var idleverse = 0
     <a href="https://orteil.dashnet.org/cookieclicker/" type="n">This is the real Cookie Clicker</a>
 
 </body>
-</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <h1></h1>
+</html>                                                        me is the just                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <h1></h1>
