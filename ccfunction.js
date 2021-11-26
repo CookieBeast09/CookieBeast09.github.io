@@ -124,7 +124,7 @@ function add()
             document.getElementById('millbill').innerHTML = cookiecount
             document.title = cookiecount + " cookies"
             document.getElementById('cps').innerHTML = "per second: " + (((((((((((cursor) + grandma * 5) + farm * 10) + mine * 47) + factory * 260) + bank * 1400) + temple * 7800) + wizardTower * 44000) + shipment * 260000) + alchemyLab * 1600000) + portal * 10000000)
-            window.onunload = function (){
+            window.onbeforeunload = function (){
                 save()
             }
             /*if (window.open == true)          
