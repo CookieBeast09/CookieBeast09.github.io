@@ -124,16 +124,17 @@ function add()
             document.getElementById('millbill').innerHTML = cookiecount
             document.title = cookiecount + " cookies"
             document.getElementById('cps').innerHTML = "per second: " + (((((((((((cursor) + grandma * 5) + farm * 10) + mine * 47) + factory * 260) + bank * 1400) + temple * 7800) + wizardTower * 44000) + shipment * 260000) + alchemyLab * 1600000) + portal * 10000000)
-            if (window.closed == true)
+            if (window.closed() == true)
             {
                 save()
                 
             }
-            if (window.open == true)          
+            /*if (window.open == true)          
             {
                 load()
                 
             }
+            */
             
         
         /*  if (parseInt(localStorage.getItem("cookiecount")) <= cookiecount)
