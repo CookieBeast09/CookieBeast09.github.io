@@ -127,6 +127,9 @@ function add()
             window.onbeforeunload = function (){
                 save()
             }
+            window.onload = function() {
+                load()
+            }
             /*if (window.open == true)          
             {
                 load()
