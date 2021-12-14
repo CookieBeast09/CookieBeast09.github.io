@@ -126,6 +126,7 @@ function add()
             document.getElementById('cps').innerHTML = "per second: " + (((((((((((cursor) + grandma * 5) + farm * 10) + mine * 47) + factory * 260) + bank * 1400) + temple * 7800) + wizardTower * 44000) + shipment * 260000) + alchemyLab * 1600000) + portal * 10000000)
             window.onbeforeunload = function (){
                 save()
+                alert('Your game has been Saved')
             }
             window.onload = function() {
                 load()
